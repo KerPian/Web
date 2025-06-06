@@ -9,8 +9,17 @@ body {
   
   header {
     background-color: #222;
-    padding: 1em;
-    text-align: center;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* si en móviles se rompe, esto lo acomoda */
+  }
+  
+  header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 2rem;
   }
     .banner {
     position: absolute;
@@ -91,5 +100,10 @@ body {
   .juego-thumb {
     width: 100%;
   }
+  .banner {
+    max-width: 60px;
+    top: 5px;
+    right: 10px;
+}
 }
   
