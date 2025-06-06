@@ -1,0 +1,95 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #eee;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #222;
+    padding: 1em;
+    text-align: center;
+  }
+    .banner {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    max-width: 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #0ff;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  nav li {
+    margin: 0 1em;
+  }
+  
+  nav a {
+    color: #0ff;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  section {
+    margin-bottom: 3em;
+  }
+  
+  .juego {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    border-radius: 8px;
+  }
+  .juego-thumb {
+  width: 375px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  flex-shrink: 0;
+  }
+  .juego-info {
+  flex: 1;
+  min-width: 200px;
+  }
+  a[download] {
+    display: inline-block;
+    margin-top: 0.5em;
+    padding: 0.5em 1em;
+    background-color: #0ff;
+    color: #000;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  a[download]:hover {
+    background-color: #0cc;
+  }
+  
+@media (max-width: 600px) {
+  .juego {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .juego-thumb {
+    width: 100%;
+  }
+}
+  
