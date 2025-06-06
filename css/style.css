@@ -9,36 +9,36 @@ body {
   
   header {
     background-color: #222;
-    padding: 1em 2em;
+    padding: 1em 3em;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* si en móviles se rompe, esto lo acomoda */
+    flex-wrap: wrap;
+    gap: 1em;
   }
   
   header h1 {
     margin: 0;
     color: #fff;
     font-size: 2rem;
+    flex: 1;
   }
     .banner {
-    position: absolute;
-    top: 0;
-    right: 50px;
-    max-width: 100px;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #0ff;
+      order: 2;
+      max-width: 100px;
+      height: auto;
   }
   
   nav ul {
+    order: 1;
+    flex: 1;
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0;
   }
   
   nav li {
@@ -91,6 +91,28 @@ body {
   }
   
 @media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .banner {
+    max-width: 60px;
+    top: 5px;
+    right: 10px;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  nav li {
+    margin: 0;
+  }
   .juego {
     flex-direction: column;
     align-items: center;
@@ -100,10 +122,6 @@ body {
   .juego-thumb {
     width: 100%;
   }
-  .banner {
-    max-width: 60px;
-    top: 5px;
-    right: 10px;
-}
+  
 }
   
