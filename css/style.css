@@ -64,6 +64,7 @@ body {
     padding: 1em;
     margin-bottom: 1.5em;
     border-radius: 8px;
+    position: relative;
   }
   .juego-thumb {
   width: 375px;
@@ -71,11 +72,48 @@ body {
   border-radius: 5px;
   object-fit: cover;
   flex-shrink: 0;
+  margin-bottom: 20px;
   }
-  .juego-info {
-  flex: 1;
-  min-width: 200px;
+  .icon-container {
+    position: absolute;
+    top: 0; right: 0;
   }
+
+  .icon {
+    width: 500px;
+    height: auto;
+    border-radius: 50px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    margin-right: -290px;
+    margin-top: -40px;
+  }
+  .secret {
+    visibility: hidden;
+    background-color: #1a237e;
+    color: #ffd700;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+  }
+  
+  .icon-container:hover .secret {
+    visibility: visible;
+    opacity: 1;
+  }
+
   a[download] {
     display: inline-block;
     margin-top: 0.5em;
@@ -90,17 +128,20 @@ body {
     background-color: #0cc;
   }
   
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+
   header {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
   .banner {
     max-width: 60px;
     top: 5px;
     right: 10px;
   }
+
   header h1 {
     font-size: 1.5rem;
   }
@@ -113,6 +154,7 @@ body {
   nav li {
     margin: 0;
   }
+
   .juego {
     flex-direction: column;
     align-items: center;
@@ -121,6 +163,20 @@ body {
 
   .juego-thumb {
     width: 100%;
+    height: auto;
+  }
+
+  .icon {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0;
+    border-radius: 20px;
+  }
+
+  .secret{
+    bottom: 110%;
+    left: 0;
+    transform: translateX(0);
   }
   
 }
