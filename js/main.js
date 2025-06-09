@@ -4,7 +4,7 @@ function esMovil() {
   }  
 
   // Bloquear descargas en móviles
-  document.querySelectorAll('a[download]').forEach(link => {
+  document.querySelectorAll('.download').forEach(link => {
     link.addEventListener('click', function (e) {
       if (esMovil()) {
         e.preventDefault();
