@@ -82,17 +82,12 @@ body {
   }
 
   .icon {
-    width: 500px;
+    width: 160px;
     height: auto;
-    border-radius: 50px;
-    object-fit: cover;
-    flex-shrink: 0;
-    margin-bottom: 10px;
     position: absolute;
-    top: 0; 
-    right: 0; 
-    margin-right: -290px;
-    margin-top: -40px;
+    top: 10px;
+    right: 10px;
+    border-radius: 20px;
   }
 
   .secret {
