@@ -203,10 +203,11 @@ body {
   }
 
   .icon-container {
-    position: static;
-    width: 100%;
+    position: absolute;
+    width: 60px;
+    height: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-top: 1em;
   }
   
@@ -226,13 +227,22 @@ body {
   }
   
   .video{
-    display: none;
+    position: static;
+    width: auto;
+    height: 150px;
+    display: block;
   }
   .videoS{
-    display: none;
+    position: static;
+    width: auto;
+    height: 150px;
+    display: block;
   }
   .videoV{
-    display: none;
+    position: static;
+    width: auto;
+    height: 150px;
+    display: block;
   }
   
 }
@@ -271,10 +281,11 @@ body {
   }
 
   .icon-container {
-    position: static;
-    width: 100%;
+    position: absolute;
+    width: 60px;
+    height: 60px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-top: 1em;
   }
   
@@ -294,7 +305,24 @@ body {
   }
 
   .video{
-    display: none;
+    position: static;
+    width: auto;
+    height: 100px;
+    display: block;
+  }
+
+  .videoS{
+    position: static;
+    width: auto;
+    height: 100px;
+    display: block;
+  }
+
+  .videoV{
+    position: static;
+    width: auto;
+    height: 100px;
+    display: block;
   }
 }
 
