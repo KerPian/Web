@@ -1,8 +1,8 @@
 //función para detectar si es móvil
 function esMovil() {
-    const userAgentMovil = /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+    const tieneTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     const pantallaChica = window.innerWidth <= 768;
-    return userAgentMovil || pantallaChica;
+    return tieneTouch || pantallaChica;
   }  
 
   function cargarPagina(pagina) {
