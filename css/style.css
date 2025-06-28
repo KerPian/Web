@@ -112,6 +112,37 @@ body {
     opacity: 1;
   }
 
+  .icon_horror {
+    width: 160px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 20px;
+  }
+
+  .secret_for_horror {
+    visibility: hidden;
+    background-color: #0B0B0B;
+    color: #D62828;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+  }
+  
+  .icon-container:hover .secret_for_horror {
+    visibility: visible;
+    opacity: 1;
+  }
+
   .download {
     display: inline-block;
     margin-top: 0.5em;
@@ -132,40 +163,6 @@ body {
   
   .download-joke {
     /*Empty. JS in use*/
-  }
-
-  .video {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 315px;
-    height: 460px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-    border: none;
-    z-index: 10;
-  }
-  .videoS {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 315px;
-    height: 200px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-    border: none;
-    z-index: 10;
-  }
-  .videoV {
-    position: absolute;
-    top: 10px;
-    right: 360px;
-    width: 315px;
-    height: 335px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 12px;
-    border: none;
-    z-index: 10;
   }
 @media (max-width: 768px) {
 
@@ -226,25 +223,6 @@ body {
     transform: translateX(-50%);
   }
   
-  .video{
-    position: static;
-    width: auto;
-    height: 150px;
-    display: block;
-  }
-  .videoS{
-    position: static;
-    width: auto;
-    height: 150px;
-    display: block;
-  }
-  .videoV{
-    position: static;
-    width: auto;
-    height: 150px;
-    display: block;
-  }
-  
 }
 @media (max-width: 480px) {
   header {
@@ -302,27 +280,6 @@ body {
     bottom: 95%;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  .video{
-    position: static;
-    width: auto;
-    height: 100px;
-    display: block;
-  }
-
-  .videoS{
-    position: static;
-    width: auto;
-    height: 100px;
-    display: block;
-  }
-
-  .videoV{
-    position: static;
-    width: auto;
-    height: 100px;
-    display: block;
   }
 }
 
