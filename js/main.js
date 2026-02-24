@@ -6,30 +6,35 @@ function esMovil() {
   }  
 
   function cargarPagina(pagina) {
-    fetch(pagina + '.html')
-      .then(res => res.text())
-      .then(data => {
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(data, 'text/html');
-        const newContent = doc.body;
-        document.getElementById('contenido').innerHTML = newContent.innerHTML;
-        nullEventoDeDescarga();
-      })
-      .catch(err => {
-        document.getElementById('contenido').innerHTML = '<p>Error al cargar contenido.</p>';
-      });
-  }
+  fetch(`./${pagina}.html`)
+    .then(res => {
+      if (!res.ok) throw new Error("404");
+      return res.text();
+    })
+    .then(data => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(data, 'text/html');
+      document.getElementById('contenido').innerHTML = doc.body.innerHTML;
+      nullEventoDeDescarga(pagina);
+    })
+    .catch(err => {
+      document.getElementById('contenido').innerHTML = '<p>Error al cargar contenido.</p>';
+      console.error(err);
+    });
+}
 
   function nullEventoDeDescarga() {
     //console.log(document.querySelectorAll('.download-game').length); //test de funcionamiento -> 0 no hay links, 0 < la función sirve
     //bloquear descargas en móviles
+    const pagina = location.hash.substring(1) || 'inicio';
     document.querySelectorAll('.pc_game').forEach(link => {
         link.addEventListener('click', function (e) {
-          if (esMovil() && pagina == 'juegos') {
+          if (esMovil() && pagina === 'juegos') {
               e.preventDefault();
               alert('La descarga no está disponible en dispositivos móviles.');
+              console.log("Pagina recibida:", pagina);
         }
-          else if (esMovil() && pagina == 'games') {
+          else if (esMovil() && pagina === 'games') {
             e.preventDefault();
             alert('The download is not available on mobile devices.');
         }

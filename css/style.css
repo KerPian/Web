@@ -161,7 +161,7 @@ body {
     background-color: #0cc;
   }
 
-  .pc-game {
+  .pc_game {
     /*Empty, just for JS*/ 
   }
   
@@ -279,6 +279,14 @@ body {
     border-radius: 15px;
     display: block;
   }  
+  .icon_horror {
+    position: static;
+    width: 100%;
+    max-width: 170px;
+    margin: 0 auto;
+    border-radius: 20px;
+    display: block;
+  } 
 
   .secret {
     bottom: 95%;
