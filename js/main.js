@@ -23,7 +23,7 @@ function esMovil() {
   function nullEventoDeDescarga() {
     //console.log(document.querySelectorAll('.download-game').length); //test de funcionamiento -> 0 no hay links, 0 < la función sirve
     //bloquear descargas en móviles
-    document.querySelectorAll('.download-game').forEach(link => {
+    document.querySelectorAll('.pc_game').forEach(link => {
         link.addEventListener('click', function (e) {
           if (esMovil()) {
               e.preventDefault();
