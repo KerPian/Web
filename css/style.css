@@ -57,6 +57,10 @@ body {
   section {
     margin-bottom: 3em;
   }
+
+  .indent {
+    text-indent: 0.5em;
+  }
   
   .juego {
     background-color: #1a1a1a;
