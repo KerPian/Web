@@ -25,9 +25,13 @@ function esMovil() {
     //bloquear descargas en móviles
     document.querySelectorAll('.pc_game').forEach(link => {
         link.addEventListener('click', function (e) {
-          if (esMovil()) {
+          if (esMovil() && pagina == 'juegos') {
               e.preventDefault();
               alert('La descarga no está disponible en dispositivos móviles.');
+        }
+          else if (esMovil() && pagina == 'games') {
+            e.preventDefault();
+            alert('The download is not available on mobile devices.');
         }
       });
     });
